@@ -6,7 +6,11 @@
       "home": "Home",
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
-        "main": "Entities",
+        "main": "Menu",
+        "client": "Client",
+        "article": "Article",
+        "factureItem": "Facture Item",
+        "facture": "Facture",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {
@@ -48,7 +52,7 @@
     "messages": {
       "info": {
         "authenticated": {
-          "prefix": "If you want to ",
+          "prefix": "To ",
           "link": "sign in",
           "suffix": ", you can try the default accounts:<br/>- Administrator (login=\"admin\" and password=\"admin\") <br/>- User (login=\"user\" and password=\"user\")."
         },
@@ -96,6 +100,7 @@
       "cancel": "Cancel",
       "delete": "Delete",
       "edit": "Edit",
+      "print": "Print",
       "open": "Open",
       "save": "Save",
       "view": "View"

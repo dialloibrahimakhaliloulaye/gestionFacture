@@ -1,0 +1,40 @@
+{
+  "name": "Facture",
+  "fields": [
+    {
+      "fieldName": "dateCreation",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "dateEcheance",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "statut",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "factureItem",
+      "otherEntityRelationshipName": "facture",
+      "relationshipName": "factureItem",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210207000022",
+  "entityTableName": "facture",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

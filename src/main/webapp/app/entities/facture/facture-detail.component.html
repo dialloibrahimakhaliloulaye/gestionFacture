@@ -1,0 +1,44 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="facture">
+            <h2><span jhiTranslate="gestionFactureApp.facture.detail.title">Facture</span> {{ facture.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="gestionFactureApp.facture.dateCreation">Date Creation</span></dt>
+                <dd>
+                    <span>{{ facture.dateCreation }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionFactureApp.facture.dateEcheance">Date Echeance</span></dt>
+                <dd>
+                    <span>{{ facture.dateEcheance }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionFactureApp.facture.statut">Statut</span></dt>
+                <dd>
+                    <span>{{ facture.statut }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionFactureApp.facture.factureItem">Facture Item</span></dt>
+                <dd>
+                    <div *ngIf="facture.factureItem">
+                        <a [routerLink]="['/facture-item', facture.factureItem?.id, 'view']">{{ facture.factureItem?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/facture', facture.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

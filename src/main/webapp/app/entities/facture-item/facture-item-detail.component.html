@@ -1,0 +1,52 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="factureItem">
+            <h2><span jhiTranslate="gestionFactureApp.factureItem.detail.title">Facture Item</span> {{ factureItem.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="gestionFactureApp.factureItem.quantite">Quantite</span></dt>
+                <dd>
+                    <span>{{ factureItem.quantite }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionFactureApp.factureItem.total">Total</span></dt>
+                <dd>
+                    <span>{{ factureItem.total }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionFactureApp.factureItem.article">Article</span></dt>
+                <dd>
+                    <div *ngIf="factureItem.article">
+                        <a [routerLink]="['/article', factureItem.article?.id, 'view']">{{ factureItem.article?.libelle }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="gestionFactureApp.factureItem.client">Client</span></dt>
+                <dd>
+                    <div *ngIf="factureItem.client">
+                        <a [routerLink]="['/client', factureItem.client?.id, 'view']">{{ factureItem.client?.nomComplet }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/facture-item', factureItem.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/facture-item', factureItem.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.print">Print</span>
+            </button>
+        </div>
+    </div>
+</div>

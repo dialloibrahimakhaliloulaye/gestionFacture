@@ -1,0 +1,43 @@
+{
+  "name": "FactureItem",
+  "fields": [
+    {
+      "fieldName": "quantite",
+      "fieldType": "Double",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "total",
+      "fieldType": "Double"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "article",
+      "otherEntityRelationshipName": "factureItem",
+      "relationshipName": "article",
+      "otherEntityField": "libelle"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "client",
+      "otherEntityRelationshipName": "factureItem",
+      "relationshipName": "client",
+      "otherEntityField": "nomComplet"
+    }
+  ],
+  "changelogDate": "20210206235922",
+  "entityTableName": "facture_item",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

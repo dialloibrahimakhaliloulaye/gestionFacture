@@ -6,7 +6,11 @@
       "home": "Accueil",
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
-        "main": "Entités",
+        "main": "Menu",
+        "client": "Client",
+        "article": "Article",
+        "factureItem": "Facture Item",
+        "facture": "Facture",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {
@@ -48,7 +52,7 @@
     "messages": {
       "info": {
         "authenticated": {
-          "prefix": "Si vous voulez vous ",
+          "prefix": "Se ",
           "link": "connecter",
           "suffix": ", vous pouvez utiliser les comptes par défaut : <br/> - Administrateur (nom d'utilisateur=\"admin\" et mot de passe =\"admin\") <br/> - Utilisateur (nom d'utilisateur=\"user\" et mot de passe =\"user\")."
         },
@@ -95,6 +99,7 @@
       "back": "Retour",
       "cancel": "Annuler",
       "edit": "Editer",
+      "print": "Imprimer",
       "delete": "Supprimer",
       "open": "Ouvrir",
       "save": "Sauvegarder",

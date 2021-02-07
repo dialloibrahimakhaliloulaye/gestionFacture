@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity FactureItem.
+    -->
+    <changeSet id="20210206235922-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="article_id"
+                                 baseTableName="facture_item"
+                                 constraintName="fk_facture_item_article_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="article"/>
+
+        <addForeignKeyConstraint baseColumnNames="client_id"
+                                 baseTableName="facture_item"
+                                 constraintName="fk_facture_item_client_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="client"/>
+
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,25 @@
+{
+  "gestionFactureApp": {
+    "factureItem": {
+      "home": {
+        "title": "Facture Items",
+        "createLabel": "Create a new Facture Item",
+        "createOrEditLabel": "Create or edit a Facture Item",
+        "notFound": "No Facture Items found"
+      },
+      "created": "A new Facture Item is created with identifier {{ param }}",
+      "updated": "A Facture Item is updated with identifier {{ param }}",
+      "deleted": "A Facture Item is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Facture Item {{ id }}?"
+      },
+      "detail": {
+        "title": "Facture Item"
+      },
+      "quantite": "Quantite",
+      "total": "Total",
+      "article": "Article",
+      "client": "Client"
+    }
+  }
+}
